@@ -1,24 +1,28 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
+using System.IO;
+using Microsoft.Extensions.Configuration;
 
-namespace EquilibraMais.DbConfig;
-
-public class EquilibraMaisDbContextFactory : IDesignTimeDbContextFactory<EquilibraMaisDbContext>
+namespace EquilibraMais.DbConfig
 {
-    public EquilibraMaisDbContext CreateDbContext(string[] args)
+    public class EquilibraMaisDbContextFactory : IDesignTimeDbContextFactory<EquilibraMaisDbContext>
     {
-        var basePath = Directory.GetCurrentDirectory();
+        public EquilibraMaisDbContext CreateDbContext(string[] args)
+        {
+            var basePath = Directory.GetCurrentDirectory();
 
-        var config = new ConfigurationBuilder()
-            .SetBasePath(basePath)
-            .AddJsonFile("appsettings.json")
-            .Build();
+            var config = new ConfigurationBuilder()
+                .SetBasePath(basePath)
+                .AddJsonFile("appsettings.json")
+                .Build();
 
-        var connectionString = config.GetConnectionString("OracleDb");
+            // Use o nome correto da connection string configurada no appsettings.json
+            var connectionString = config.GetConnectionString("AzureSqlDb");
 
-        var optionsBuilder = new DbContextOptionsBuilder<EquilibraMaisDbContext>();
-        optionsBuilder.UseOracle(connectionString);
+            var optionsBuilder = new DbContextOptionsBuilder<EquilibraMaisDbContext>();
+            optionsBuilder.UseSqlServer(connectionString);
 
-        return new EquilibraMaisDbContext(optionsBuilder.Options);
+            return new EquilibraMaisDbContext(optionsBuilder.Options);
+        }
     }
 }

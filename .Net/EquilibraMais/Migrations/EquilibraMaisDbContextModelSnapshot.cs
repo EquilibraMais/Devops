@@ -3,6 +3,7 @@ using System;
 using EquilibraMais.DbConfig;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -19,20 +20,20 @@ namespace EquilibraMais.Migrations
                 .HasAnnotation("ProductVersion", "9.0.10")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
-            OracleModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+            SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
             modelBuilder.Entity("EquilibraMais.Model.Empresa", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("NUMBER(10)")
+                        .HasColumnType("int")
                         .HasColumnName("ID");
 
-                    OraclePropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Nome_empresa")
                         .IsRequired()
-                        .HasColumnType("NVARCHAR2(2000)")
+                        .HasColumnType("nvarchar(max)")
                         .HasColumnName("NOME_EMPRESA");
 
                     b.HasKey("Id");
@@ -44,42 +45,42 @@ namespace EquilibraMais.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("NUMBER(10)")
+                        .HasColumnType("int")
                         .HasColumnName("ID");
 
-                    OraclePropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<int>("Carga")
-                        .HasColumnType("NUMBER(10)")
+                        .HasColumnType("int")
                         .HasColumnName("CARGA");
 
                     b.Property<DateTime>("Data")
-                        .HasColumnType("TIMESTAMP(7)")
+                        .HasColumnType("datetime2")
                         .HasColumnName("DATA");
 
                     b.Property<int>("Energia")
-                        .HasColumnType("NUMBER(10)")
+                        .HasColumnType("int")
                         .HasColumnName("ENERGIA");
 
                     b.Property<string>("Historico_medico")
-                        .HasColumnType("NVARCHAR2(2000)")
+                        .HasColumnType("nvarchar(max)")
                         .HasColumnName("HISTORICO_MEDICO");
 
                     b.Property<int>("Humor")
-                        .HasColumnType("NUMBER(10)")
+                        .HasColumnType("int")
                         .HasColumnName("HUMOR");
 
                     b.Property<string>("Observacao")
                         .IsRequired()
-                        .HasColumnType("NVARCHAR2(2000)")
+                        .HasColumnType("nvarchar(max)")
                         .HasColumnName("OBSERVACAO");
 
                     b.Property<int>("Sono")
-                        .HasColumnType("NUMBER(10)")
+                        .HasColumnType("int")
                         .HasColumnName("SONO");
 
                     b.Property<int>("Usuario_id")
-                        .HasColumnType("NUMBER(10)")
+                        .HasColumnType("int")
                         .HasColumnName("USUARIO_ID");
 
                     b.HasKey("Id");
@@ -93,18 +94,18 @@ namespace EquilibraMais.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("NUMBER(10)")
+                        .HasColumnType("int")
                         .HasColumnName("ID");
 
-                    OraclePropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Descricao")
                         .IsRequired()
-                        .HasColumnType("NVARCHAR2(2000)")
+                        .HasColumnType("nvarchar(max)")
                         .HasColumnName("DESCRICAO");
 
                     b.Property<int>("Empresa_id")
-                        .HasColumnType("NUMBER(10)")
+                        .HasColumnType("int")
                         .HasColumnName("EMPRESA_ID");
 
                     b.HasKey("Id");
@@ -118,23 +119,23 @@ namespace EquilibraMais.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("NUMBER(10)")
+                        .HasColumnType("int")
                         .HasColumnName("ID");
 
-                    OraclePropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Cargo")
                         .IsRequired()
-                        .HasColumnType("NVARCHAR2(2000)")
+                        .HasColumnType("nvarchar(max)")
                         .HasColumnName("CARGO");
 
                     b.Property<string>("Nome")
                         .IsRequired()
-                        .HasColumnType("NVARCHAR2(2000)")
+                        .HasColumnType("nvarchar(max)")
                         .HasColumnName("NOME");
 
                     b.Property<int>("Setor_id")
-                        .HasColumnType("NUMBER(10)")
+                        .HasColumnType("int")
                         .HasColumnName("SETOR_ID");
 
                     b.HasKey("Id");
