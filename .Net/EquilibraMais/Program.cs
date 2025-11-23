@@ -8,22 +8,24 @@ using EquilibraMais.Services;
 
 public class Program
 {
-    public static async Task Main(string[] args) {
-
+    public static async Task Main(string[] args)
+    {
         var builder = WebApplication.CreateBuilder(args);
 
+        // Conexão Azure SQL Database
         builder.Services.AddDbContext<EquilibraMaisDbContext>(options =>
             options.UseSqlServer(builder.Configuration.GetConnectionString("AzureSqlDb")));
 
+        // OpenAPI/Swagger
         builder.Services.AddOpenApi();
-        
-        // Grupo de HealthChecks
+
+        // HealthChecks: SQL Server
         builder.Services.AddHealthChecks()
             .AddSqlServer(
                 builder.Configuration.GetConnectionString("AzureSqlDb"),
-                healthQuery: "SELECT 1 FROM DUAL",
-                name: "oracle",
-                tags: new[] { "db", "oracle" }
+                healthQuery: "SELECT 1", // Não use "FROM DUAL" em SQL Server!
+                name: "sqlserver",
+                tags: new[] { "db", "sqlserver" }
             )
             .AddDbContextCheck<EquilibraMaisDbContext>(
                 name: "efcore",
@@ -31,10 +33,10 @@ public class Program
             );
 
         builder.Services.AddScoped<RelatorioService>();
-        
+
         var app = builder.Build();
-        
-        // Verifica o grupo de HealthCheck e retorna um Json com os status
+
+        // EndPoint do HealthCheck (sempre disponível)
         app.MapHealthChecks("/health", new HealthCheckOptions
         {
             ResponseWriter = async (context, report) =>
@@ -53,15 +55,14 @@ public class Program
             }
         });
 
-        if (app.Environment.IsDevelopment())
-        {
-            app.MapOpenApi();
-            app.MapScalarApiReference();
-        }
+        // Ativa OpenAPI e Scalar SEM restringir ao ambiente de desenvolvimento
+        app.MapOpenApi();
+        app.MapScalarApiReference();
 
+        // Endpoints das APIs versionadas
         var v1 = app.MapGroup("/api/v1");
         var v2 = app.MapGroup("/api/v2");
-        
+
         EmpresaEndpoints.Map(v1);
         Funcionario_InfoEndpoints.Map(v1);
         SetorEndpoints.Map(v1);
