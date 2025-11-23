@@ -1,34 +1,46 @@
-# ASP.NET Core (.NET Framework)
-# Build and test ASP.NET Core projects targeting the full .NET Framework.
-# Add steps that publish symbols, save build artifacts, and more:
-# https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
-
 trigger:
-- main
+  - main
 
 pool:
-  vmImage: 'windows-latest'
+  vmImage: "windows-latest"
 
 variables:
-  solution: '**/*.sln'
-  buildPlatform: 'Any CPU'
-  buildConfiguration: 'Release'
+  buildConfiguration: "Release"
 
 steps:
-- task: NuGetToolInstaller@1
+  - task: UseDotNet@2
+    inputs:
+      packageType: "sdk"
+      version: "9.x"
+      installationPath: $(Agent.ToolsDirectory)/dotnet
 
-- task: NuGetCommand@2
-  inputs:
-    restoreSolution: '$(solution)'
+  - task: NuGetToolInstaller@1
+    displayName: "Install NuGet tool"
 
-- task: VSBuild@1
-  inputs:
-    solution: '$(solution)'
-    msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:DesktopBuildPackageLocation="$(build.artifactStagingDirectory)\WebApp.zip" /p:DeployIisAppPath="Default Web Site"'
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
+  - task: NuGetCommand@2
+    inputs:
+      command: "restore"
+      restoreSolution: "**/*.sln"
+    displayName: "Restore NuGet packages"
 
-- task: VSTest@2
-  inputs:
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
+  - script: dotnet build --configuration $(buildConfiguration)
+    displayName: "Build solution"
+
+  - script: dotnet test --configuration $(buildConfiguration) --no-build --verbosity normal
+    displayName: "Run tests"
+
+  - script: dotnet publish ./Net/EquilibraMais/EquilibraMais.csproj --configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)
+    displayName: "Publish project"
+
+  - task: PublishBuildArtifacts@1
+    inputs:
+      PathtoPublish: "$(Build.ArtifactStagingDirectory)"
+      ArtifactName: "drop"
+      publishLocation: "Container"
+
+  - task: AzureWebApp@1
+    inputs:
+      azureSubscription: "EquilibraMais"
+      appType: "webApp"
+      appName: "equilibramais"
+      package: "$(Build.ArtifactStagingDirectory)"
