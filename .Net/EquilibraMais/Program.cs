@@ -10,7 +10,6 @@ public class Program
 {
     public static async Task Main(string[] args)
     {
-
         var builder = WebApplication.CreateBuilder(args);
 
         builder.Services.AddDbContext<EquilibraMaisDbContext>(options =>
@@ -54,9 +53,9 @@ public class Program
             }
         });
 
+        // Garante Scalar e OpenAPI SEM limitar ao ambiente de desenvolvimento
         app.MapOpenApi();
         app.MapScalarApiReference();
-
 
         var v1 = app.MapGroup("/api/v1");
         var v2 = app.MapGroup("/api/v2");
