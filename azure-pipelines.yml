@@ -1,4 +1,4 @@
-      trigger:
+trigger:
   - main
 
 pool:
@@ -12,16 +12,13 @@ steps:
     inputs:
       packageType: 'sdk'
       version: '9.x'
-      installationPath: $(Agent.ToolsDirectory)/dotnet
 
   - task: NuGetToolInstaller@1
-    displayName: 'Install NuGet tool'
 
   - task: NuGetCommand@2
     inputs:
       command: 'restore'
       restoreSolution: 'EquilibraMais.sln'
-    displayName: 'Restore NuGet packages'
 
   - script: dotnet build EquilibraMais.sln --configuration $(buildConfiguration)
     displayName: 'Build solution'
@@ -38,9 +35,12 @@ steps:
       ArtifactName: 'drop'
       publishLocation: 'Container'
 
-    - task: AzureWebApp@1
+  - task: AzureWebApp@1
     inputs:
       azureSubscription: "EquilibraMais-RM"
-      appType: "webApp"
+      appType: 'webApp'
       appName: "equilibramais"
-      package: "$(Build.ArtifactStagingDirectory)"
+      package: '$(Build.ArtifactStagingDirectory)'
+
+
+
