@@ -5,27 +5,25 @@ using Scalar.AspNetCore;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using System.Text.Json;
 using EquilibraMais.Services;
-using Microsoft.Extensions.DependencyInjection;
 
 public class Program
 {
-    public static async Task Main(string[] args)
-    {
+    public static async Task Main(string[] args) {
+
         var builder = WebApplication.CreateBuilder(args);
 
-        // Conexão para Azure SQL Database
         builder.Services.AddDbContext<EquilibraMaisDbContext>(options =>
-            options.UseSqlServer(builder.Configuration.GetConnectionString("AzureSqlDb"))); // IMPORTANTE: Nome da connection string
+            options.UseSqlServer(builder.Configuration.GetConnectionString("AzureSqlDb")));
 
         builder.Services.AddOpenApi();
         
-        // Grupo de HealthChecks para SQL Server
+        // Grupo de HealthChecks
         builder.Services.AddHealthChecks()
             .AddSqlServer(
                 builder.Configuration.GetConnectionString("AzureSqlDb"),
-                healthQuery: "SELECT 1",
-                name: "sqlserver",
-                tags: new[] { "db", "sql" }
+                healthQuery: "SELECT 1 FROM DUAL",
+                name: "oracle",
+                tags: new[] { "db", "oracle" }
             )
             .AddDbContextCheck<EquilibraMaisDbContext>(
                 name: "efcore",
@@ -55,9 +53,11 @@ public class Program
             }
         });
 
-        // Garante Scalar e OpenAPI SEM limitar ao ambiente de desenvolvimento
-        app.MapOpenApi();
-        app.MapScalarApiReference();
+        if (app.Environment.IsDevelopment())
+        {
+            app.MapOpenApi();
+            app.MapScalarApiReference();
+        }
 
         var v1 = app.MapGroup("/api/v1");
         var v2 = app.MapGroup("/api/v2");

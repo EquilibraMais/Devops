@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\FIAP\\Avaliações - FIAP\\2º Ano\\2º Semestre\\Global Solution\\EquilibraMais\\EquilibraMais.Tests\\EquilibraMais.Tests.csproj": {}
+    "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\FIAP\\Avaliações - FIAP\\2º Ano\\2º Semestre\\Global Solution\\.Net\\EquilibraMais\\EquilibraMais.Tests\\EquilibraMais.Tests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\FIAP\\Avaliações - FIAP\\2º Ano\\2º Semestre\\Global Solution\\EquilibraMais\\EquilibraMais.Tests\\EquilibraMais.Tests.csproj": {
+    "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\FIAP\\Avaliações - FIAP\\2º Ano\\2º Semestre\\Global Solution\\.Net\\EquilibraMais\\EquilibraMais.Tests\\EquilibraMais.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\FIAP\\Avaliações - FIAP\\2º Ano\\2º Semestre\\Global Solution\\EquilibraMais\\EquilibraMais.Tests\\EquilibraMais.Tests.csproj",
+        "projectUniqueName": "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\FIAP\\Avaliações - FIAP\\2º Ano\\2º Semestre\\Global Solution\\.Net\\EquilibraMais\\EquilibraMais.Tests\\EquilibraMais.Tests.csproj",
         "projectName": "EquilibraMais.Tests",
-        "projectPath": "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\FIAP\\Avaliações - FIAP\\2º Ano\\2º Semestre\\Global Solution\\EquilibraMais\\EquilibraMais.Tests\\EquilibraMais.Tests.csproj",
+        "projectPath": "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\FIAP\\Avaliações - FIAP\\2º Ano\\2º Semestre\\Global Solution\\.Net\\EquilibraMais\\EquilibraMais.Tests\\EquilibraMais.Tests.csproj",
         "packagesPath": "C:\\Users\\mathe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\FIAP\\Avaliações - FIAP\\2º Ano\\2º Semestre\\Global Solution\\EquilibraMais\\EquilibraMais.Tests\\obj\\",
+        "outputPath": "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\FIAP\\Avaliações - FIAP\\2º Ano\\2º Semestre\\Global Solution\\.Net\\EquilibraMais\\EquilibraMais.Tests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\mathe\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -29,8 +29,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\FIAP\\Avaliações - FIAP\\2º Ano\\2º Semestre\\Global Solution\\EquilibraMais\\EquilibraMais\\EquilibraMais.csproj": {
-                "projectPath": "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\FIAP\\Avaliações - FIAP\\2º Ano\\2º Semestre\\Global Solution\\EquilibraMais\\EquilibraMais\\EquilibraMais.csproj"
+              "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\FIAP\\Avaliações - FIAP\\2º Ano\\2º Semestre\\Global Solution\\.Net\\EquilibraMais\\EquilibraMais\\EquilibraMais.csproj": {
+                "projectPath": "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\FIAP\\Avaliações - FIAP\\2º Ano\\2º Semestre\\Global Solution\\.Net\\EquilibraMais\\EquilibraMais\\EquilibraMais.csproj"
               }
             }
           }
@@ -100,14 +100,14 @@
         }
       }
     },
-    "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\FIAP\\Avaliações - FIAP\\2º Ano\\2º Semestre\\Global Solution\\EquilibraMais\\EquilibraMais\\EquilibraMais.csproj": {
+    "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\FIAP\\Avaliações - FIAP\\2º Ano\\2º Semestre\\Global Solution\\.Net\\EquilibraMais\\EquilibraMais\\EquilibraMais.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\FIAP\\Avaliações - FIAP\\2º Ano\\2º Semestre\\Global Solution\\EquilibraMais\\EquilibraMais\\EquilibraMais.csproj",
+        "projectUniqueName": "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\FIAP\\Avaliações - FIAP\\2º Ano\\2º Semestre\\Global Solution\\.Net\\EquilibraMais\\EquilibraMais\\EquilibraMais.csproj",
         "projectName": "EquilibraMais",
-        "projectPath": "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\FIAP\\Avaliações - FIAP\\2º Ano\\2º Semestre\\Global Solution\\EquilibraMais\\EquilibraMais\\EquilibraMais.csproj",
+        "projectPath": "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\FIAP\\Avaliações - FIAP\\2º Ano\\2º Semestre\\Global Solution\\.Net\\EquilibraMais\\EquilibraMais\\EquilibraMais.csproj",
         "packagesPath": "C:\\Users\\mathe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\FIAP\\Avaliações - FIAP\\2º Ano\\2º Semestre\\Global Solution\\EquilibraMais\\EquilibraMais\\obj\\",
+        "outputPath": "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\FIAP\\Avaliações - FIAP\\2º Ano\\2º Semestre\\Global Solution\\.Net\\EquilibraMais\\EquilibraMais\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\mathe\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -143,7 +143,7 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
-            "AspNetCore.HealthChecks.Oracle": {
+            "AspNetCore.HealthChecks.SqlServer": {
               "target": "Package",
               "version": "[9.0.0, )"
             },
@@ -165,6 +165,10 @@
               "target": "Package",
               "version": "[9.0.10, )"
             },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[9.0.10, )"
+            },
             "Microsoft.Extensions.Diagnostics.HealthChecks": {
               "target": "Package",
               "version": "[9.0.11, )"
@@ -176,10 +180,6 @@
             "NSwag.AspNetCore": {
               "target": "Package",
               "version": "[14.6.2, )"
-            },
-            "Oracle.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[9.23.26000, )"
             },
             "Scalar.AspNetCore": {
               "target": "Package",

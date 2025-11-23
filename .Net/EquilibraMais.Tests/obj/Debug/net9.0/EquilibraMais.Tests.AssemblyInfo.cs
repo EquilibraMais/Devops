@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EquilibraMais.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3bac16295cf8dbecbd1dbef3c749c19644c39b24")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2790d3269fb5a4d191e61a35ff75af2920fdf789")]
 [assembly: System.Reflection.AssemblyProductAttribute("EquilibraMais.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EquilibraMais.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

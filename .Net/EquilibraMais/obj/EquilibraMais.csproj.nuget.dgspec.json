@@ -1,25 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Fiap\\2tdspf\\GS_EquilibraMais\\Devops\\.Net\\EquilibraMais\\EquilibraMais.csproj": {}
+    "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\FIAP\\Avaliações - FIAP\\2º Ano\\2º Semestre\\Global Solution\\.Net\\EquilibraMais\\EquilibraMais\\EquilibraMais.csproj": {}
   },
   "projects": {
-    "D:\\Fiap\\2tdspf\\GS_EquilibraMais\\Devops\\.Net\\EquilibraMais\\EquilibraMais.csproj": {
+    "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\FIAP\\Avaliações - FIAP\\2º Ano\\2º Semestre\\Global Solution\\.Net\\EquilibraMais\\EquilibraMais\\EquilibraMais.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Fiap\\2tdspf\\GS_EquilibraMais\\Devops\\.Net\\EquilibraMais\\EquilibraMais.csproj",
+        "projectUniqueName": "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\FIAP\\Avaliações - FIAP\\2º Ano\\2º Semestre\\Global Solution\\.Net\\EquilibraMais\\EquilibraMais\\EquilibraMais.csproj",
         "projectName": "EquilibraMais",
-        "projectPath": "D:\\Fiap\\2tdspf\\GS_EquilibraMais\\Devops\\.Net\\EquilibraMais\\EquilibraMais.csproj",
-        "packagesPath": "C:\\Users\\Julio Cesar\\.nuget\\packages\\",
-        "outputPath": "D:\\Fiap\\2tdspf\\GS_EquilibraMais\\Devops\\.Net\\EquilibraMais\\obj\\",
+        "projectPath": "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\FIAP\\Avaliações - FIAP\\2º Ano\\2º Semestre\\Global Solution\\.Net\\EquilibraMais\\EquilibraMais\\EquilibraMais.csproj",
+        "packagesPath": "C:\\Users\\mathe\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mathe\\OneDrive\\Área de Trabalho\\FIAP\\Avaliações - FIAP\\2º Ano\\2º Semestre\\Global Solution\\.Net\\EquilibraMais\\EquilibraMais\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Julio Cesar\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\mathe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -68,7 +71,7 @@
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[9.0.0, )"
+              "version": "[9.0.10, )"
             },
             "Microsoft.Extensions.Diagnostics.HealthChecks": {
               "target": "Package",
@@ -84,7 +87,7 @@
             },
             "Scalar.AspNetCore": {
               "target": "Package",
-              "version": "[2.11.0, )"
+              "version": "[2.10.3, )"
             },
             "Swashbuckle.AspNetCore.Annotations": {
               "target": "Package",
@@ -110,7 +113,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
