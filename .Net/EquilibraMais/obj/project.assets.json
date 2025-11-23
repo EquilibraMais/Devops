@@ -1355,7 +1355,7 @@
           "Microsoft.AspNetCore.App"
         ]
       },
-      "Scalar.AspNetCore/2.10.3": {
+      "Scalar.AspNetCore/2.11.0": {
         "type": "package",
         "compile": {
           "lib/net9.0/Scalar.AspNetCore.dll": {
@@ -4242,10 +4242,10 @@
         "nswag.generation.aspnetcore.nuspec"
       ]
     },
-    "Scalar.AspNetCore/2.10.3": {
-      "sha512": "uDJlK7ZcHJgAIbXKB3zf4D/70VVEdsYaN3qwoUSBP3OHrdlLR/cIIYp16OFfX9d4VP29b30Jf6KXF59PvFGG4w==",
+    "Scalar.AspNetCore/2.11.0": {
+      "sha512": "zOV12+2VE6Tsb3U3YRtJtVABmzbAEPEkiYLAckHBgUuj6suarSp3kA4HE3UU9kNQmJrU6xrD5GTOAtwVENMgJQ==",
       "type": "package",
-      "path": "scalar.aspnetcore/2.10.3",
+      "path": "scalar.aspnetcore/2.11.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -4257,7 +4257,7 @@
         "lib/net8.0/Scalar.AspNetCore.xml",
         "lib/net9.0/Scalar.AspNetCore.dll",
         "lib/net9.0/Scalar.AspNetCore.xml",
-        "scalar.aspnetcore.2.10.3.nupkg.sha512",
+        "scalar.aspnetcore.2.11.0.nupkg.sha512",
         "scalar.aspnetcore.nuspec"
       ]
     },
@@ -5348,7 +5348,7 @@
       "Microsoft.Extensions.Diagnostics.HealthChecks >= 9.0.11",
       "Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore >= 9.0.10",
       "NSwag.AspNetCore >= 14.6.2",
-      "Scalar.AspNetCore >= 2.10.3",
+      "Scalar.AspNetCore >= 2.11.0",
       "Swashbuckle.AspNetCore.Annotations >= 9.0.6"
     ]
   },
@@ -5435,7 +5435,7 @@
           },
           "Scalar.AspNetCore": {
             "target": "Package",
-            "version": "[2.10.3, )"
+            "version": "[2.11.0, )"
           },
           "Swashbuckle.AspNetCore.Annotations": {
             "target": "Package",

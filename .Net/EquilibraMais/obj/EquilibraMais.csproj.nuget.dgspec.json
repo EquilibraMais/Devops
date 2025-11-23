@@ -84,7 +84,7 @@
             },
             "Scalar.AspNetCore": {
               "target": "Package",
-              "version": "[2.10.3, )"
+              "version": "[2.11.0, )"
             },
             "Swashbuckle.AspNetCore.Annotations": {
               "target": "Package",

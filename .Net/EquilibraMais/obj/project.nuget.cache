@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "yUhHaKfeP7Y=",
+  "dgSpecHash": "D7c+A8z1Pfc=",
   "success": true,
   "projectFilePath": "D:\\Fiap\\2tdspf\\GS_EquilibraMais\\Devops\\.Net\\EquilibraMais\\EquilibraMais.csproj",
   "expectedPackageFiles": [
@@ -69,7 +69,7 @@
     "C:\\Users\\Julio Cesar\\.nuget\\packages\\nswag.core.yaml\\14.6.2\\nswag.core.yaml.14.6.2.nupkg.sha512",
     "C:\\Users\\Julio Cesar\\.nuget\\packages\\nswag.generation\\14.6.2\\nswag.generation.14.6.2.nupkg.sha512",
     "C:\\Users\\Julio Cesar\\.nuget\\packages\\nswag.generation.aspnetcore\\14.6.2\\nswag.generation.aspnetcore.14.6.2.nupkg.sha512",
-    "C:\\Users\\Julio Cesar\\.nuget\\packages\\scalar.aspnetcore\\2.10.3\\scalar.aspnetcore.2.10.3.nupkg.sha512",
+    "C:\\Users\\Julio Cesar\\.nuget\\packages\\scalar.aspnetcore\\2.11.0\\scalar.aspnetcore.2.11.0.nupkg.sha512",
     "C:\\Users\\Julio Cesar\\.nuget\\packages\\swashbuckle.aspnetcore.annotations\\9.0.6\\swashbuckle.aspnetcore.annotations.9.0.6.nupkg.sha512",
     "C:\\Users\\Julio Cesar\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\9.0.6\\swashbuckle.aspnetcore.swagger.9.0.6.nupkg.sha512",
     "C:\\Users\\Julio Cesar\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\9.0.6\\swashbuckle.aspnetcore.swaggergen.9.0.6.nupkg.sha512",
