@@ -1,6 +1,5 @@
 ﻿using EquilibraMais.Model;
 using Microsoft.EntityFrameworkCore;
-using HealthChecks.SqlServer;
 
 namespace EquilibraMais.DbConfig;
 

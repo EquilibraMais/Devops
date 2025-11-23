@@ -5,7 +5,7 @@ using Scalar.AspNetCore;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using System.Text.Json;
 using EquilibraMais.Services;
-using HealthChecks.SqlServer;
+using Microsoft.Extensions.DependencyInjection;
 
 public class Program
 {
