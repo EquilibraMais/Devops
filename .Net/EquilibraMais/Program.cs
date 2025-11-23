@@ -12,18 +12,19 @@ public class Program
     {
         var builder = WebApplication.CreateBuilder(args);
 
+        // Conexão para Azure SQL Database
         builder.Services.AddDbContext<EquilibraMaisDbContext>(options =>
-            options.UseOracle(builder.Configuration.GetConnectionString("OracleDb")));
+            options.UseSqlServer(builder.Configuration.GetConnectionString("AzureSqlDb"))); // IMPORTANTE: Nome da connection string
 
         builder.Services.AddOpenApi();
         
-        // Grupo de HealthChecks
+        // Grupo de HealthChecks para SQL Server
         builder.Services.AddHealthChecks()
-            .AddOracle(
-                builder.Configuration.GetConnectionString("OracleDb"),
-                healthQuery: "SELECT 1 FROM DUAL",
-                name: "oracle",
-                tags: new[] { "db", "oracle" }
+            .AddSqlServer(
+                builder.Configuration.GetConnectionString("AzureSqlDb"),
+                healthQuery: "SELECT 1",
+                name: "sqlserver",
+                tags: new[] { "db", "sql" }
             )
             .AddDbContextCheck<EquilibraMaisDbContext>(
                 name: "efcore",
