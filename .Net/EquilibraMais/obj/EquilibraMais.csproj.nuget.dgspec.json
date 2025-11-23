@@ -44,10 +44,6 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
-            "AspNetCore.HealthChecks.Oracle": {
-              "target": "Package",
-              "version": "[9.0.0, )"
-            },
             "AspNetCore.HealthChecks.SqlServer": {
               "target": "Package",
               "version": "[9.0.0, )"
@@ -70,6 +66,10 @@
               "target": "Package",
               "version": "[9.0.10, )"
             },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
             "Microsoft.Extensions.Diagnostics.HealthChecks": {
               "target": "Package",
               "version": "[9.0.11, )"
@@ -81,10 +81,6 @@
             "NSwag.AspNetCore": {
               "target": "Package",
               "version": "[14.6.2, )"
-            },
-            "Oracle.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[9.23.26000, )"
             },
             "Scalar.AspNetCore": {
               "target": "Package",
