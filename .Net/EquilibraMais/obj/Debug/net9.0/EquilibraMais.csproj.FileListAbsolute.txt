@@ -161,3 +161,15 @@ C:\Users\mathe\OneDrive\Área de Trabalho\FIAP\Avaliações - FIAP\2º Ano\2º S
 C:\Users\mathe\OneDrive\Área de Trabalho\FIAP\Avaliações - FIAP\2º Ano\2º Semestre\Global Solution\EquilibraMais\EquilibraMais\bin\Debug\net9.0\Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore.dll
 C:\Users\mathe\OneDrive\Área de Trabalho\FIAP\Avaliações - FIAP\2º Ano\2º Semestre\Global Solution\EquilibraMais\EquilibraMais\bin\Debug\net9.0\Microsoft.Extensions.FileProviders.Abstractions.dll
 C:\Users\mathe\OneDrive\Área de Trabalho\FIAP\Avaliações - FIAP\2º Ano\2º Semestre\Global Solution\EquilibraMais\EquilibraMais\bin\Debug\net9.0\Microsoft.Extensions.Hosting.Abstractions.dll
+D:\Fiap\2tdspf\GS_EquilibraMais\Devops\.Net\EquilibraMais\obj\Debug\net9.0\EquilibraMais.csproj.AssemblyReference.cache
+D:\Fiap\2tdspf\GS_EquilibraMais\Devops\.Net\EquilibraMais\obj\Debug\net9.0\rpswa.dswa.cache.json
+D:\Fiap\2tdspf\GS_EquilibraMais\Devops\.Net\EquilibraMais\obj\Debug\net9.0\EquilibraMais.GeneratedMSBuildEditorConfig.editorconfig
+D:\Fiap\2tdspf\GS_EquilibraMais\Devops\.Net\EquilibraMais\obj\Debug\net9.0\EquilibraMais.AssemblyInfoInputs.cache
+D:\Fiap\2tdspf\GS_EquilibraMais\Devops\.Net\EquilibraMais\obj\Debug\net9.0\EquilibraMais.AssemblyInfo.cs
+D:\Fiap\2tdspf\GS_EquilibraMais\Devops\.Net\EquilibraMais\obj\Debug\net9.0\EquilibraMais.csproj.CoreCompileInputs.cache
+D:\Fiap\2tdspf\GS_EquilibraMais\Devops\.Net\EquilibraMais\obj\Debug\net9.0\EquilibraMais.MvcApplicationPartsAssemblyInfo.cs
+D:\Fiap\2tdspf\GS_EquilibraMais\Devops\.Net\EquilibraMais\obj\Debug\net9.0\EquilibraMais.MvcApplicationPartsAssemblyInfo.cache
+D:\Fiap\2tdspf\GS_EquilibraMais\Devops\.Net\EquilibraMais\obj\Debug\net9.0\EquilibraMais.sourcelink.json
+D:\Fiap\2tdspf\GS_EquilibraMais\Devops\.Net\EquilibraMais\obj\Debug\net9.0\EquilibraMais.dll
+D:\Fiap\2tdspf\GS_EquilibraMais\Devops\.Net\EquilibraMais\obj\Debug\net9.0\refint\EquilibraMais.dll
+D:\Fiap\2tdspf\GS_EquilibraMais\Devops\.Net\EquilibraMais\obj\Debug\net9.0\EquilibraMais.pdb
