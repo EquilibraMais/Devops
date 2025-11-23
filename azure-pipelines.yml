@@ -1,44 +1,44 @@
-trigger:
+      trigger:
   - main
 
 pool:
-  vmImage: "windows-latest"
+  vmImage: 'windows-latest'
 
 variables:
-  buildConfiguration: "Release"
+  buildConfiguration: 'Release'
 
 steps:
   - task: UseDotNet@2
     inputs:
-      packageType: "sdk"
-      version: "9.x"
+      packageType: 'sdk'
+      version: '9.x'
       installationPath: $(Agent.ToolsDirectory)/dotnet
 
   - task: NuGetToolInstaller@1
-    displayName: "Install NuGet tool"
+    displayName: 'Install NuGet tool'
 
   - task: NuGetCommand@2
     inputs:
-      command: "restore"
-      restoreSolution: "**/*.sln"
-    displayName: "Restore NuGet packages"
+      command: 'restore'
+      restoreSolution: 'EquilibraMais.sln'
+    displayName: 'Restore NuGet packages'
 
-  - script: dotnet build --configuration $(buildConfiguration)
-    displayName: "Build solution"
+  - script: dotnet build EquilibraMais.sln --configuration $(buildConfiguration)
+    displayName: 'Build solution'
 
-  - script: dotnet test --configuration $(buildConfiguration) --no-build --verbosity normal
-    displayName: "Run tests"
+  - script: dotnet test EquilibraMais.sln --configuration $(buildConfiguration) --no-build --verbosity normal
+    displayName: 'Run tests'
 
-  - script: dotnet publish ./Net/EquilibraMais/EquilibraMais.csproj --configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)
-    displayName: "Publish project"
+  - script: dotnet publish EquilibraMais.csproj --configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)
+    displayName: 'Publish project'
 
   - task: PublishBuildArtifacts@1
     inputs:
-      PathtoPublish: "$(Build.ArtifactStagingDirectory)"
-      ArtifactName: "drop"
-      publishLocation: "Container"
+      PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+      ArtifactName: 'drop'
+      publishLocation: 'Container'
 
-  - task: AzureWebApp@1
+    - task: AzureWebApp@1
     inputs:
       azureSubscription: "EquilibraMais-RM"
       appType: "webApp"
