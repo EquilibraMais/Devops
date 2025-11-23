@@ -20,14 +20,27 @@ steps:
       command: 'restore'
       restoreSolution: 'EquilibraMais.sln'
 
-  - script: dotnet build EquilibraMais.sln --configuration $(buildConfiguration)
+  - task: DotNetCoreCLI@2
     displayName: 'Build solution'
+    inputs:
+      command: 'build'
+      projects: '.Net/EquilibraMais.sln'
 
-  - script: dotnet test EquilibraMais.sln --configuration $(buildConfiguration) --no-build --verbosity normal
+      arguments: '--configuration $(buildConfiguration)'
+
+  - task: DotNetCoreCLI@2
     displayName: 'Run tests'
+    inputs:
+      command: 'test'
+      projects: '.Net/EquilibraMais.sln'
+      arguments: '--configuration $(buildConfiguration) --no-build --verbosity normal'
 
-  - script: dotnet publish EquilibraMais.csproj --configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)
+  - task: DotNetCoreCLI@2
     displayName: 'Publish project'
+    inputs:
+      command: 'publish'
+      projects: '.Net/EquilibraMais.csproj'
+      arguments: '--configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)'
 
   - task: PublishBuildArtifacts@1
     inputs:
@@ -37,10 +50,7 @@ steps:
 
   - task: AzureWebApp@1
     inputs:
-      azureSubscription: "EquilibraMais-RM"
+      azureSubscription: 'EquilibraMais-RM'
       appType: 'webApp'
-      appName: "equilibramais"
+      appName: 'equilibramais'
       package: '$(Build.ArtifactStagingDirectory)'
-
-
-
