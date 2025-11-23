@@ -28,6 +28,7 @@ public class Usuario : IBindableFromHttpContext<Usuario>
     [Column("ID")]
     [Key]
     [Description("Identificado único do Usuário")]
+    [JsonIgnore]
     public int Id { get; set; }
 
     [Column("NOME")]
@@ -42,5 +43,6 @@ public class Usuario : IBindableFromHttpContext<Usuario>
     [Description("Identificador único do Setor que o Usuário pertence")]
     public int Setor_id { get; set; }
     
-    public required Setor Setor { get; set; }
+    [JsonIgnore]
+    public Setor Setor { get; set; }
 }

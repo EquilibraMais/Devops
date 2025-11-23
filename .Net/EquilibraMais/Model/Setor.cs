@@ -27,6 +27,7 @@ public class Setor : IBindableFromHttpContext<Setor>
     [Column("ID")]
     [Key]
     [Description("Identificado único do Setor")]
+    [JsonIgnore]
     public int Id { get; set; }
     
     [Column("DESCRICAO")]
@@ -36,6 +37,6 @@ public class Setor : IBindableFromHttpContext<Setor>
     [Column("EMPRESA_ID")]
     [Description("Identificador único da Empresa que o Setor pertence")]
     public int Empresa_id { get; set; }
-    
-    public required Empresa Empresa { get; set; }
+    [JsonIgnore]
+    public Empresa Empresa { get; set; }
 }

@@ -27,6 +27,7 @@ public class Funcionario_Info : IBindableFromHttpContext<Funcionario_Info>
     [Column("ID")]
     [Key]
     [Description("Identificado único das informações do funcionário")]
+    [JsonIgnore]
     public int Id { get; set; }
     
     [Column("HUMOR")]
@@ -60,7 +61,7 @@ public class Funcionario_Info : IBindableFromHttpContext<Funcionario_Info>
     [Column("DATA")]
     [Description("Data em que o check foi feito")]
     public DateTime Data { get; set; }
-    
-    public required Usuario Usuario { get; set; }
+    [JsonIgnore]
+    public Usuario Usuario { get; set; }
     
 }
