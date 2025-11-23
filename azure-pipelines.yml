@@ -1,56 +1,39 @@
 trigger:
-  - main
+- master
 
 pool:
   vmImage: 'windows-latest'
 
 variables:
+  solution: '**/*.sln'
+  buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
 
 steps:
-  - task: UseDotNet@2
-    inputs:
-      packageType: 'sdk'
-      version: '9.x'
+- task: NuGetToolInstaller@1
 
-  - task: NuGetToolInstaller@1
+- task: NuGetCommand@2
+  inputs:
+    restoreSolution: '$(solution)'
 
-  - task: NuGetCommand@2
-    inputs:
-      command: 'restore'
-      restoreSolution: 'EquilibraMais.sln'
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'publish'
+    projects: '**/EquilibraMais.csproj' # ajustado ao nome do seu projeto
+    arguments: '--configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)\EquilibraMais'
+    zipAfterPublish: true
 
-  - task: DotNetCoreCLI@2
-    displayName: 'Build solution'
-    inputs:
-      command: 'build'
-      projects: '.Net/EquilibraMais.sln'
+- script: dir $(Build.ArtifactStagingDirectory)\EquilibraMais
+  displayName: 'Listar arquivos publicados'
 
-      arguments: '--configuration $(buildConfiguration)'
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)\EquilibraMais\EquilibraMais.zip'
+    ArtifactName: 'drop'
 
-  - task: DotNetCoreCLI@2
-    displayName: 'Run tests'
-    inputs:
-      command: 'test'
-      projects: '.Net/EquilibraMais.sln'
-      arguments: '--configuration $(buildConfiguration) --no-build --verbosity normal'
+- task: AzureWebApp@1
+  inputs:
+    azureSubscription: 'EquilibraMais-RM'
+    appName: 'equilibramais'
+    package: '$(Build.ArtifactStagingDirectory)\EquilibraMais\EquilibraMais.zip'
 
-  - task: DotNetCoreCLI@2
-    displayName: 'Publish project'
-    inputs:
-      command: 'publish'
-      projects: '.Net/EquilibraMais.csproj'
-      arguments: '--configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)'
-
-  - task: PublishBuildArtifacts@1
-    inputs:
-      PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-      ArtifactName: 'drop'
-      publishLocation: 'Container'
-
-  - task: AzureWebApp@1
-    inputs:
-      azureSubscription: 'EquilibraMais-RM'
-      appType: 'webApp'
-      appName: 'equilibramais'
-      package: '$(Build.ArtifactStagingDirectory)'
