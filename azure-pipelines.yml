@@ -17,9 +17,16 @@ steps:
     restoreSolution: '$(solution)'
 
 - task: DotNetCoreCLI@2
+  displayName: 'Run tests'
+  inputs:
+    command: 'test'
+    projects: '**/EquilibraMais.Tests.csproj'
+    arguments: '--configuration $(buildConfiguration) --no-build --logger trx'
+
+- task: DotNetCoreCLI@2
   inputs:
     command: 'publish'
-    projects: '**/EquilibraMais.csproj' # ajustado ao nome do seu projeto
+    projects: '**/EquilibraMais.csproj'
     arguments: '--configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)\EquilibraMais'
     zipAfterPublish: true
 
@@ -36,4 +43,3 @@ steps:
     azureSubscription: 'EquilibraMais-RM'
     appName: 'equilibramais'
     package: '$(Build.ArtifactStagingDirectory)\EquilibraMais\EquilibraMais.zip'
-
