@@ -17,7 +17,7 @@
           "Microsoft.Extensions.Diagnostics.HealthChecks": "9.0.11",
           "Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore": "9.0.10",
           "NSwag.AspNetCore": "14.6.2",
-          "Scalar.AspNetCore": "2.10.3",
+          "Scalar.AspNetCore": "2.11.0",
           "Swashbuckle.AspNetCore.Annotations": "9.0.6"
         },
         "runtime": {
@@ -995,11 +995,11 @@
           }
         }
       },
-      "Scalar.AspNetCore/2.10.3": {
+      "Scalar.AspNetCore/2.11.0": {
         "runtime": {
           "lib/net9.0/Scalar.AspNetCore.dll": {
-            "assemblyVersion": "2.10.3.0",
-            "fileVersion": "2.10.3.0"
+            "assemblyVersion": "2.11.0.0",
+            "fileVersion": "2.11.0.0"
           }
         }
       },
@@ -1692,12 +1692,12 @@
       "path": "nswag.generation.aspnetcore/14.6.2",
       "hashPath": "nswag.generation.aspnetcore.14.6.2.nupkg.sha512"
     },
-    "Scalar.AspNetCore/2.10.3": {
+    "Scalar.AspNetCore/2.11.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-uDJlK7ZcHJgAIbXKB3zf4D/70VVEdsYaN3qwoUSBP3OHrdlLR/cIIYp16OFfX9d4VP29b30Jf6KXF59PvFGG4w==",
-      "path": "scalar.aspnetcore/2.10.3",
-      "hashPath": "scalar.aspnetcore.2.10.3.nupkg.sha512"
+      "sha512": "sha512-zOV12+2VE6Tsb3U3YRtJtVABmzbAEPEkiYLAckHBgUuj6suarSp3kA4HE3UU9kNQmJrU6xrD5GTOAtwVENMgJQ==",
+      "path": "scalar.aspnetcore/2.11.0",
+      "hashPath": "scalar.aspnetcore.2.11.0.nupkg.sha512"
     },
     "Swashbuckle.AspNetCore.Annotations/9.0.6": {
       "type": "package",
