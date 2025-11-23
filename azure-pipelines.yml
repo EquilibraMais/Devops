@@ -24,21 +24,22 @@ steps:
     displayName: 'Build solution'
     inputs:
       command: 'build'
-      projects: 'EquilibraMais.sln'
+      projects: '.Net/EquilibraMais.sln'
+
       arguments: '--configuration $(buildConfiguration)'
 
   - task: DotNetCoreCLI@2
     displayName: 'Run tests'
     inputs:
       command: 'test'
-      projects: 'EquilibraMais.sln'
+      projects: '.Net/EquilibraMais.sln'
       arguments: '--configuration $(buildConfiguration) --no-build --verbosity normal'
 
   - task: DotNetCoreCLI@2
     displayName: 'Publish project'
     inputs:
       command: 'publish'
-      projects: 'EquilibraMais.csproj'
+      projects: '.Net/EquilibraMais.csproj'
       arguments: '--configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)'
 
   - task: PublishBuildArtifacts@1
