@@ -1,5 +1,3 @@
-![Logo EquilibraMais](LogoEquilibraMais(1).png)
-
 # ⚙️ EquilibraMais - Projeto Devops (Api de Clima Organizacional)
 
 ### 👥 Integrantes do Projeto
