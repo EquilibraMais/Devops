@@ -1,4 +1,4 @@
-# ⚙️ EquilibraMais - Projeto .NET (Api de Clima Organizacional)
+# ⚙️ EquilibraMais - Projeto Devops (Api de Clima Organizacional)
 
 ### 👥 Integrantes do Projeto
 
